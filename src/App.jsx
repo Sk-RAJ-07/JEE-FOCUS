@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { DARK, LIGHT, DIFF_SECS } from "./constants";
 import { GS, TopBar } from "./components";
 import { SetupScreen, SessionScreen, AnalyticsScreen } from "./screens";
@@ -125,6 +126,7 @@ export default function App() {
           <AnalyticsScreen C={C} analytics={analytics} onRestart={reset}/>
         )}
       </main>
+      <Analytics />
     </div>
   );
 }
